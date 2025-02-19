@@ -1,0 +1,103 @@
+/* .container: Container principal que engloba todo o conteúdo da página */
+.container {
+  width: 100%; /* Ocupa toda a largura da tela */
+  max-width: 1024px; /* Define uma largura máxima de 1024px */
+  margin: 40px auto 0 auto; /* Espaçamento superior de 40px e centraliza horizontalmente */
+  padding: 0 18px; /* Adiciona um pequeno padding de 18px nas laterais */
+  display: flex; /* Define como flex container para permitir flexbox */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  justify-content: center; /* Alinha os itens ao centro na direção principal */
+  align-items: center; /* Alinha os itens ao centro na direção transversal */
+}
+
+/* .main: Área principal da página */
+.main {
+  width: 100%; /* Ocupa toda a largura do container */
+}
+
+/* .main h1: Estilo do título dentro da área principal */
+.main h1 {
+  margin-bottom: 14px; /* Adiciona um espaço abaixo do título */
+}
+
+/* .task: Caixa que envolve a descrição da tarefa */
+.task {
+  border: 1.5px solid #909090; /* Borda de 1.5px de cor cinza */
+  padding: 14px; /* Espaçamento interno de 14px */
+  line-height: 150%; /* Aumenta o espaçamento entre as linhas de texto */
+  border-radius: 4px; /* Bordas arredondadas */
+  display: flex; /* Usa o modelo flexbox */
+  align-items: center; /* Alinha os itens ao centro na direção transversal */
+  justify-content: center; /* Centraliza o conteúdo dentro da caixa */
+}
+
+/* .task p: Estilo do texto dentro da tarefa */
+.task p {
+  white-space: pre-wrap; /* Permite quebras de linha automáticas */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* .commentsContainer: Container para os comentários */
+.commentsContainer {
+  margin: 18px 0; /* Espaçamento superior e inferior de 18px */
+  width: 100%; /* Ocupa toda a largura */
+  max-width: 1024px; /* Define uma largura máxima de 1024px */
+}
+
+/* .commentsContainer h2: Estilo do título da seção de comentários */
+.commentsContainer h2 {
+  margin: 14px 0; /* Espaçamento superior e inferior de 14px */
+}
+
+/* .button: Estilo do botão */
+.button {
+  width: 100%; /* Ocupa toda a largura disponível */
+  padding: 12px 0; /* Espaçamento interno de 12px na vertical */
+  border-radius: 4px; /* Bordas arredondadas */
+  border: 0; /* Sem borda */
+  color: #fff; /* Texto branco */
+  background-color: #3183ff; /* Cor de fundo azul */
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Mostra o cursor de "mão" ao passar sobre o botão */
+}
+
+/* .button:disabled: Estilo do botão quando desabilitado */
+.button:disabled {
+  cursor: not-allowed; /* Mostra o cursor de "não permitido" */
+  background-color: rgba(49, 131, 255, 0.604); /* Cor de fundo com opacidade */
+}
+
+/* .comment: Estilo de cada comentário */
+.comment {
+  border: 1px solid #ddd; /* Borda cinza clara */
+  padding: 14px; /* Espaçamento interno de 14px */
+  border-radius: 4px; /* Bordas arredondadas */
+  margin-bottom: 14px; /* Espaçamento inferior de 14px */
+}
+
+/* .headComment: Container para o nome e o botão de excluir dentro de um comentário */
+.headComment {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Alinha os itens ao centro */
+}
+
+/* .commentsLabel: Estilo do nome do usuário que fez o comentário */
+.commentsLabel {
+  background-color: #ccc; /* Cor de fundo cinza */
+  padding: 4px 8px; /* Espaçamento interno */
+  margin-right: 8px; /* Espaçamento à direita */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* .buttonTrash: Estilo do botão de exclusão de comentário */
+.buttonTrash {
+  background-color: transparent; /* Fundo transparente */
+  border: 0; /* Sem borda */
+  cursor: pointer; /* Cursor de "mão" ao passar sobre o botão */
+}
+
+/* .comment > p: Estilo do texto dentro do comentário */
+.comment > p {
+  margin-top: 14px; /* Espaçamento superior de 14px */
+  white-space: pre-wrap; /* Permite quebras de linha automáticas */
+}

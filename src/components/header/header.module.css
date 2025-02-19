@@ -1,0 +1,70 @@
+/* Estiliza o cabeçalho da página */
+.header {
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 76px; /* Define a altura do cabeçalho */
+  background-color: #0f0f0f; /* Cor de fundo escura */
+  display: flex; /* Usa flexbox para alinhamento */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Define o container interno do cabeçalho */
+.content {
+  padding: 0 18px; /* Espaçamento interno lateral */
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1024px; /* Define uma largura máxima */
+  display: flex; /* Usa flexbox para alinhamento */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: space-between; /* Distribui os itens com espaço entre eles */
+}
+
+/* Remove a decoração dos links dentro do conteúdo */
+.content a {
+  text-decoration: none;
+}
+
+/* Estiliza a navegação dentro do cabeçalho */
+.nav {
+  display: flex; /* Usa flexbox para alinhar itens */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 8px; /* Adiciona um espaçamento entre os itens */
+}
+
+/* Estiliza o link de navegação "Meu Painel" */
+.link {
+  background-color: #f1f1f1; /* Cor de fundo clara */
+  color: #0f0f0f; /* Cor do texto escura */
+  padding: 4px 14px; /* Espaçamento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estiliza o logo do site */
+.logo {
+  color: #fff; /* Cor branca */
+  font-size: 32px; /* Tamanho grande da fonte */
+}
+
+/* Estiliza o símbolo "+" dentro do logo */
+.logo span {
+  color: #ea3140; /* Cor vermelha para destaque */
+  font-size: 28px; /* Tamanho um pouco menor que o restante do texto */
+}
+
+/* Estiliza o botão de login/logout */
+.loginButton {
+  background-color: transparent; /* Fundo transparente */
+  padding: 8px 32px; /* Espaçamento interno */
+  border-radius: 24px; /* Bordas arredondadas */
+  color: #fff; /* Cor do texto branca */
+  border: 1.5px solid #fff; /* Borda branca */
+  cursor: pointer; /* Transforma o cursor em ponteiro ao passar */
+  transition: all 0.5s; /* Adiciona uma transição suave */
+}
+
+/* Define o efeito ao passar o mouse sobre o botão */
+.loginButton:hover {
+  transform: scale(1.08); /* Aumenta ligeiramente o botão */
+  background-color: #fff; /* Muda a cor de fundo para branco */
+  color: #0f0f0f; /* Muda a cor do texto para preto */
+  font-weight: bold; /* Deixa o texto em negrito */
+}

@@ -1,0 +1,9 @@
+/* Estiliza a área de texto */
+.textarea {
+  width: 100%; /* Ocupa toda a largura disponível do elemento pai */
+  height: 160px; /* Define uma altura fixa para o textarea */
+  resize: none; /* Impede que o usuário redimensione a área de texto */
+  border-radius: 8px; /* Adiciona cantos arredondados */
+  outline: none; /* Remove a borda azul padrão ao focar no elemento */
+  padding: 8px; /* Adiciona um espaçamento interno para o texto */
+}

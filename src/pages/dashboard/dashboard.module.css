@@ -1,0 +1,140 @@
+/* Define o container principal ocupando toda a largura da tela */
+.container {
+  width: 100%;
+}
+
+/* Define o estilo da seção de conteúdo */
+.content {
+  background-color: #0f0f0f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Define a área do formulário de adicionar tarefas */
+.contentForm {
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 18px;
+  padding-bottom: 28px;
+  margin-top: 58px;
+}
+
+/* Estiliza o título da seção */
+.title {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Define a área do checkbox */
+.checkBoxArea {
+  margin: 14px 0;
+}
+
+/* Estiliza o texto do checkbox */
+.checkBoxArea label {
+  margin-left: 8px;
+  color: #fff;
+  cursor: pointer; /* Transforma o cursor em ponteiro ao passar por cima */
+}
+
+/* Define o tamanho do checkbox */
+.checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+/* Estiliza o botão de adicionar tarefa */
+.button {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #3183ff;
+}
+
+/* Define o container das tarefas */
+.taskContainer {
+  margin: 34px auto 0 auto;
+  padding: 0 18px;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove o sublinhado dos links dentro do container de tarefas */
+.taskContainer a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+/* Estiliza o título "Minhas tarefas" */
+.taskContainer h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+/* Estiliza cada tarefa */
+.task {
+  margin-bottom: 14px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #909090;
+  border-radius: 4px;
+  padding: 14px;
+}
+
+/* Define a área da tag (pública) e botão de compartilhamento */
+.tagContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Estiliza a tag indicando que a tarefa é pública */
+.tag {
+  background-color: #3183ff;
+  padding: 2px 6px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Estiliza o botão de compartilhamento */
+.shareButton {
+  background: transparent;
+  border: 0;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+/* Define a estrutura de cada tarefa */
+.taskContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Estiliza o texto da tarefa */
+.taskContent p {
+  white-space: pre-wrap; /* Mantém a formatação do texto */
+  text-align: justify;
+}
+
+/* Estiliza o botão de deletar tarefa */
+.trashButton {
+  background-color: transparent;
+  border: 0;
+  margin: 0 8px;
+  cursor: pointer;
+}

@@ -1,168 +1,83 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+/* .container - Contêiner principal da página */
+.container {
+  background-color: #0f0f0f; /* Cor de fundo escura para a página */
+  width: 100vw; /* Largura de 100% da largura da viewport */
+  height: calc(
+    100vh - 76px
+  ); /* Altura de 100% da viewport menos 76px (provavelmente para ajustar o cabeçalho) */
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: column; /* Organiza os itens em uma coluna */
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+/* .logoContent - Contêiner que envolve a logo */
+.logoContent {
+  display: flex; /* Flexbox para layout */
+  flex-direction: column; /* Coloca os itens (logo) em uma coluna */
+  align-items: center; /* Centraliza a logo horizontalmente */
+  justify-content: center; /* Centraliza a logo verticalmente */
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+/* .hero - Estilo para a imagem da logo */
+.hero {
+  width: auto; /* Largura automática para manter a proporção da imagem */
+  height: auto; /* Altura automática para manter a proporção da imagem */
+  object-fit: contain; /* Faz com que a imagem se ajuste dentro da área sem distorcer */
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+/* .title - Estilo para o título da página */
+.title {
+  color: #fff; /* Cor do texto branca */
+  text-align: center; /* Centraliza o texto */
+  margin: 28px; /* Adiciona margem ao redor do título */
+  line-height: 150%; /* Aumenta a altura da linha para melhorar a legibilidade */
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+/* .infoContent - Contêiner para exibir as informações (posts e comentários) */
+.infoContent {
+  display: flex; /* Flexbox para layout */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around; /* Espaça os itens igualmente entre si */
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
+/* .box - Estilo para cada caixa que exibe o número de posts e comentários */
+.box {
+  background-color: #fafafa; /* Cor de fundo clara para a caixa */
+  padding: 14px 44px; /* Padding interno para afastar o conteúdo das bordas */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: transform 0.5s; /* Transição suave ao aplicar a transformação */
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
+/* .box:hover - Efeito ao passar o mouse sobre a caixa */
+.box:hover {
+  transform: scale(
+    1.08
+  ); /* Aumenta ligeiramente o tamanho da caixa ao passar o mouse */
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+/* Estilos para telas menores (máximo de 580px de largura) */
+@media (max-width: 580px) {
+  /* .hero - Ajuste para a imagem na tela menor */
+  .hero {
+    max-width: 80%; /* Define a largura máxima da imagem como 80% da tela */
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  /* .title - Ajusta o tamanho do texto para telas menores */
+  .title {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
   }
 
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+  /* .infoContent - Ajusta o layout para telas menores */
+  .infoContent {
+    flex-direction: column; /* Coloca os itens na coluna */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+    padding-bottom: 10px; /* Adiciona um pouco de espaçamento na parte inferior */
   }
 
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+  /* .box - Ajusta o tamanho das caixas para telas menores */
+  .box {
+    width: 80%; /* Largura de 80% da tela */
+    text-align: center; /* Centraliza o texto dentro da caixa */
   }
 }
