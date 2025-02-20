@@ -1,40 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# **Projeto Tarefas**  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este é um projeto para organizar e gerenciar tarefas de forma eficiente, com funcionalidades para criar, visualizar e comentar nas tarefas. O projeto foi desenvolvido como um módulo de Next.js do Matheus Fraga (Sujeito Programador) e usa o Firebase como banco de dados em tempo real.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## **Tecnologias Utilizadas**  
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Next.js** – Framework React para construção de interfaces rápidas, escaláveis e com renderização do lado do servidor (SSR).  
+- **Firebase** – Banco de dados em tempo real para armazenar tarefas e comentários.  
+- **React** – Biblioteca JavaScript para construção da interface de usuário.  
+- **Firebase Firestore** – Para gerenciar dados em tempo real (tarefas e comentários).  
+- **CSS Modules** – Estilização modularizada para evitar conflitos de classes.  
+- **NextAuth.js** – Para gerenciar a autenticação de usuários, utilizando o login via Google.  
+- **React Icons** – Biblioteca de ícones para melhorar a UI/UX do sistema.  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Funcionalidades**  
 
-## Learn More
+- **Autenticação de Usuário:**  
+  - Através do **NextAuth.js**, os usuários podem se autenticar utilizando o Google.  
+  - **Somente usuários autenticados podem cadastrar e comentar nas tarefas**.  
 
-To learn more about Next.js, take a look at the following resources:
+- **Gerenciamento de Tarefas:**  
+  - O sistema permite **criar e visualizar tarefas**.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- **Comentários em Tarefas:**  
+  - **Apenas usuários logados** podem comentar nas tarefas.  
+  - O **usuário que fez o comentário pode excluir seu próprio comentário**.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Interface Responsiva:**  
+  - Design adaptável para diferentes tamanhos de tela (**mobile-first**).  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Outras Informações**  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **Revalidate:** O projeto utiliza **revalidate** para garantir a atualização dos dados de forma eficiente.  
+- **Controle de Acesso:** É **obrigatório estar logado** para cadastrar e comentar nas tarefas.
